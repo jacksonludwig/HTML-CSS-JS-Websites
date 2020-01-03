@@ -17,17 +17,17 @@ function randomComputerChoice() {
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
-  result_p.innerHTML = userChoice + " beats " + computerChoice + ". You win!";
+  result_p.innerHTML = `${userChoice} beats ${computerChoice}. You win!`;
 }
 
 function lose(userChoice, computerChoice) {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = computerChoice + " beats " + userChoice + ". You lose!";
+  result_p.innerHTML = `${computerChoice} beats ${userChoice}. You lose!`;
 }
 
 function tie(userChoice, computerChoice) {
-  result_p.innerHTML = computerChoice + " ties with " + userChoice + ". Draw!";
+  result_p.innerHTML = `${computerChoice} ties with ${userChoice}. Draw!`;
 }
 
 function game(choice) {
