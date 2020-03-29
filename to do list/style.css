@@ -15,11 +15,13 @@ body {
 /* header */
 
 #title {
-  background-color: #d08770;
+  background-color: #4c566a;
   width: 100%;
+  height: 50px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  padding-top: 0.3em;
 }
 
 /* content */
@@ -78,7 +80,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #b48ead;
+
   height: 2.5rem; /* Footer height */
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -98,7 +100,7 @@ a:active {
 }
 
 a:hover {
-  color: #3b4252;
+  color: #b48ead;
 }
 
 #link {
