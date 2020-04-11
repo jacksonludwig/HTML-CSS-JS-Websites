@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <meta charset="utf-8" />
+    <title>Currency Converter</title>
+  </head>
 
-<head>
-  <script src="{{ url_for('static', filename='index.js') }}"></script>
-  <meta charset="utf-8">
-  <title>Currency Converter</title>
-</head>
-
-<body>
-  <form id="form" autocomplete="off" action="index.html" method="post">
-    <input id="currency" type="text" value="USD" autofocus placeholder="Currency">
-    <input type="submit" value="Get Exchange Rate">
-  </form>
-  <br>
-  <div id="result">
-
-  </div>
-</body>
-
+  <body>
+    <form id="form" autocomplete="off" action="index.html" method="post">
+      <input
+        id="currency"
+        type="text"
+        value="USD"
+        autofocus
+        placeholder="Currency"
+      />
+      <input type="submit" value="Get Exchange Rate" />
+    </form>
+    <br />
+    <div id="result"></div>
+  </body>
 </html>

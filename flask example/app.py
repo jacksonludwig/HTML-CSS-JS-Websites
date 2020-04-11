@@ -3,6 +3,8 @@ from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
+KEY = "?access_key=314dd5e57ab376e68890c481801a47d7"
+
 
 @app.route("/")
 def index():
@@ -12,7 +14,7 @@ def index():
 @app.route("/convert", methods=["POST"])
 def convert():
     currency = request.form.get("currency")
-    res = requests.get("http://data.fixer.io/api/latest?access_key=314dd5e57ab376e68890c481801a47d7",
+    res = requests.get(f"http://data.fixer.io/api/latest{KEY}",
                        params={"base": "USD", "symbols": currency})
 
     if res.status_code != 200:

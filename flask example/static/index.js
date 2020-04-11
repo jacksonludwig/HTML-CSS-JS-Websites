@@ -1,23 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#form').onsubmit = () => {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#form").onsubmit = () => {
     const request = new XMLHttpRequest();
-    const currency = document.querySelector('#currency').value;
-    request.open('POST', '/convert');
+    const currency = document.querySelector("#currency").value;
+    request.open("POST", "/convert");
 
     request.onload = () => {
       const data = JSON.parse(request.responseText);
       if (data.success) {
-        const contents = `1 USD is equal to ${data.rate} ${currency}.`
-        document.querySelector('#result').innerHTML = content;
+        const contents = `1 USD is equal to ${data.rate} ${currency}.`;
+        document.querySelector("#result").innerHTML = content;
       } else {
-        document.querySelector('#result').innerHTML = 'There was an error converting.'
+        document.querySelector("#result").innerHTML =
+          "There was an error converting.";
       }
-    }
+    };
 
     const data = new FormData();
-    data.append('currency', currency);
+    data.append("currency", currency);
 
     request.send(data);
     return false;
-  }
-})
+  };
+});
