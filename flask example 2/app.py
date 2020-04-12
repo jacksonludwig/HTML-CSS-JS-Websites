@@ -20,5 +20,11 @@ def bye():
 @app.route("/")
 @app.route("/today")
 def today():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now().second % 5 == 0
     return render_template("index.html", today=now)
+
+
+@app.route("/people")
+def list_people():
+    names = ["john", "jack", "joe"]
+    return render_template("index.html", names=names)

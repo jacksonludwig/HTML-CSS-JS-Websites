@@ -6,7 +6,17 @@
     <title>Website</title>
   </head>
   <body>
-    <h1>{{ headline }}</h1>
-    <h2>{{ today }}</h2>
+    <ul>
+      {% for name in names %}
+      <li>{{ name }}</li>
+      {% endfor %}
+    </ul>
+
+    <br />
+    {% if today %}
+    <h1>Time is divisible by 5!</h1>
+    {% else %}
+    <h1>Time is not divisible by 5!</h1>
+    {% endif %}
   </body>
 </html>
